@@ -1,3 +1,4 @@
+-- Creacion de la db
 CREATE DATABASE hospital;
 USE hospital;
 
