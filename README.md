@@ -1,5 +1,5 @@
-sql-coderHouse
-Pasos para clonar la DB:
+#sql-coderHouse
+##Pasos para clonar la DB:
 
 Buscar el archivo /sql/create_db_tables.sql
 Ejecutar los scripts de creacion de Db y de tablas
