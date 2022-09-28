@@ -3,7 +3,7 @@ USE hospital;
 Creacion de una vista que trae toda la informacion de cada paciente registrado.
 Hace el inner join de las tablas de obras_sociales, y localidades
 */ 
-CREATE VIEW pacientes_completos AS
+CREATE OR REPLACE VIEW pacientes_completos AS
 SELECT
 	pac.id_paciente,
     pac.dni,
@@ -31,7 +31,7 @@ Creacion de vista que muestra todas las consultas ordenadas por fecha descencien
 Se realiza una query a la tabla de consutlas y se inclue el inner join de las tablas de pacientes, especialidades_medicas y doctores
 */ 
 
-CREATE VIEW consultas_completas AS
+CREATE OR REPLACE VIEW consultas_completas AS
 SELECT
 	cons.consulta_id,
     cons.fecha_consulta,
@@ -55,7 +55,7 @@ SELECT * FROM hospital.consultas_completas;
 Creacion de vista que muestra los registros de pacientes internados actualmente. Tambien muestra su edad, genero y cuantos dias llevan ingresados
 Se realiza la quer sobre la tabla de internaciones y el inner join con las tablas de pacientes y obras_sociales
 */ 
-CREATE VIEW internaciones_completas AS
+CREATE OR REPLACE VIEW internaciones_completas AS
 SELECT
 	inter.internacion_id,
     concat(pac.nombre, ' ', pac.apellido) AS paciente,
@@ -82,7 +82,7 @@ Creacion de una vista que muestra la informacion de todos los doctores
 Los ordena segun la cantidad de cosultas que atendieron en el ultimo tiempo
 hace el inner join con la tablas de especialidades_medicas y una subconsulta a la tabla de consultas.
 */ 
-CREATE VIEW doctores_completos AS
+CREATE OR REPLACE VIEW doctores_completos AS
 SELECT
 	doc.id_doctor,
     concat('Dr/a. ', doc.nombre, ' ', doc.apellido) AS nombre,
@@ -101,7 +101,7 @@ SELECT * FROM hospital.doctores_completos;
 Creacion de la vista que devuelve informacion de las obras sociales y cuales son las mas elegidas por los pacientes
 Hace la query a la tabla de obras_sociales y una subcunsulta a la tabla de pacientes.
 */ 
-CREATE VIEW obras_sociales_completas AS
+CREATE OR REPLACE VIEW obras_sociales_completas AS
 SELECT
 	os.obra_social_id,
     os.nombre,
