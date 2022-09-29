@@ -1,3 +1,4 @@
+internacion_id,id_paciente,ingreso,cama,egreso,motivo_ingreso
 1,1,2020-08-22,4,2020-09-08,neumonia bilateral asociada a COVID-19
 2,2,2020-08-24,5,2020-09-03,neumonia bilateral asociada a COVID-19
 3,6,2020-08-21,8,2020-09-04,neumonia bilateral asociada a COVID-19

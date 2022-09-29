@@ -1,3 +1,4 @@
+id_doctor,nombre,apellido,matricula,especialidad_id
 1,Yesica,Bueno,98217,1
 2,Otilia,Gómez ,93880,2
 3,Joaquin ,Gago ,81674,3
