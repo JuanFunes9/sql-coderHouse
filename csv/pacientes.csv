@@ -2,26 +2,26 @@ id_paciente,dni,nombre,apellido,fecha_nacimiento,genero,telefono,email,internado
 1,39759143,Juan,Castro,1996-02-04,masculino,+54(011)351-44-84847 ,juan@gmail.com,0,La Rosa 231,5,3
 2,46658688,Mirian ,Osuna ,1971-03-25,femenino,+54(011)928-60-40184 ,mirian@gmail.com,1,"Ronda Valeria, 815, 90º A",1,1
 3,45099635,Ane ,Llopis ,1980-06-25,femenino,+54(011)757-95-55598 ,ane@gmail.com,0,"Passeig Candelaria, 59 ",2,2
-4,48172079,Maria ,Mayor ,1943-01-22,femenino,+54(011)443-39-53413 ,maria@gmail.com,1,"Avenida Martí, 1 ",3,
+4,48172079,Maria ,Mayor ,1943-01-22,femenino,+54(011)443-39-53413 ,maria@gmail.com,1,"Avenida Martí, 1 ",3,2
 5,30851494,Lucia ,Villaverde ,2018-09-17,femenino,+54(011)097-40-93450 ,locia@gmail.com,0,"Paseo Casillas, 929",4,4
-6,43293525,Alicia ,Diallo ,1955-07-20,femenino,+54(011)304-95-08363 ,alicia@gmail.com,0,"Avenida Isaac, 57",5,
+6,43293525,Alicia ,Diallo ,1955-07-20,femenino,+54(011)304-95-08363 ,alicia@gmail.com,0,"Avenida Isaac, 57",5,5
 7,35117319,Jesus ,Encinas ,1984-10-21,masculino,+54(011)966-50-16386 ,jesus@gmail.com,0,"Camino Andrea, 391 ",6,6
 8,21290678,Noemi ,Murillo ,1925-11-09,femenino,,noemi@gmail.com,0,"Avenida Ana, 9",7,7
-9,47331175,Yolanda ,Rus ,1974-06-10,femenino,+54(011)613-65-82585 ,yolanda@gmail.com,0,"Plaza Gabriela, 4",8,
+9,47331175,Yolanda ,Rus ,1974-06-10,femenino,+54(011)613-65-82585 ,yolanda@gmail.com,0,"Plaza Gabriela, 4",8,2
 10,49720941,Alejandro ,Bello ,1926-03-13,masculino,+54(011)340-33-49719 ,alejandro@gmail.com,0,"Rúa Mara, 0, 7º A",9,9
-11,57163458,Nestor ,Aparicio ,1989-01-30,masculino,+54(011)843-01-79815 ,nestor_a@gmail.com,0,"Camiño Marco, 6",10,
-12,44946937,Agustina ,Maroto ,1998-12-23,femenino,+54(011)425-24-00064 ,agus.maroto@gmail.com,0,"Travessera Miguel, 23",11,
+11,57163458,Nestor ,Aparicio ,1989-01-30,masculino,+54(011)843-01-79815 ,nestor_a@gmail.com,0,"Camiño Marco, 6",10,6
+12,44946937,Agustina ,Maroto ,1998-12-23,femenino,+54(011)425-24-00064 ,agus.maroto@gmail.com,0,"Travessera Miguel, 23",11,7
 13,32273313,Evaristo ,Solana ,2002-09-25,masculino,+54(011)176-88-14608 ,evaristo@gmail.com,0,"Plaça Jorge, 3, Entre suelo 2º",12,2
 14,47259042,Andoni ,Cabrera ,1999-07-12,masculino,+54(011)963-00-77653 ,andoni_cabrera5@gmail.com,0,"Avenida Quintana, 2 ",13,3
 15,47398340,Maria Soledad ,Gascon ,1994-01-15,femenino,+54(011)782-14-36508 ,mgascon@gmail.com,1,"Ronda Prado, 3 ",14,4
 16,21971264,Jose Antonio ,Urbano ,1984-09-08,masculino,,J-antonio@gmail.com,1,"Carrer Gerard, 666",15,5
 17,39681949,Jose Antonio ,Gabarri ,2009-11-08,masculino,+54(011)760-81-68908 ,gabarri_jose@gmail.com,0,"Travesía Paola, 88",16,6
-18,29103833,Eliseo ,Aragon ,1935-07-16,masculino,,eliseo@gmail.com,0,"Calle Sotelo, 6",17,
+18,29103833,Eliseo ,Aragon ,1935-07-16,masculino,,eliseo@gmail.com,0,"Calle Sotelo, 6",17,9
 19,53123372,Nancy ,Villa ,1993-09-25,femenino,+54(011)487-16-47944 ,nancy@gmail.com,0,"Avenida Espinal, 79",18,8
-20,43948557,Adoracion ,Lorente ,2022-03-13,masculino,+54(011)761-02-71199 ,ador@gmail.com,0,"Calle Romo, 37",19,
-21,31393142,Salvador ,Vaca ,1992-06-12,masculino,,salvador_vaca@gmail.com,1,"Plaza Isaac, 357",20,
-22,28564781,Roberto ,de Leon ,2010-09-02,masculino,,roberto@gmail.com,1,"Camiño Nil, 0, 9º E",21,
-23,39632888,Maria Pilar ,Jurado ,1982-05-18,femenino,+54(011)978-66-87541 ,mp_jurado@gmail.com,0,"Rúa Valentina, 2",22,13
+20,43948557,Adoracion ,Lorente ,2022-03-13,masculino,+54(011)761-02-71199 ,ador@gmail.com,0,"Calle Romo, 37",19,4
+21,31393142,Salvador ,Vaca ,1992-06-12,masculino,,salvador_vaca@gmail.com,1,"Plaza Isaac, 357",1,11
+22,28564781,Roberto ,de Leon ,2010-09-02,masculino,,roberto@gmail.com,1,"Camiño Nil, 0, 9º E",12,6
+23,39632888,Maria Pilar ,Jurado ,1982-05-18,femenino,+54(011)978-66-87541 ,mp_jurado@gmail.com,0,"Rúa Valentina, 2",11,13
 24,28033068,Diego ,Barcelo ,1987-06-04,masculino,,diego01@gmail.com,0,"Ruela Villar, 9",1,3
 25,26305520,Karima ,Plasencia ,1969-04-23,femenino,,karima_pla@gmail.com,1,Av. Mía Montañez # 53351,2,4
 26,44881485,Florentino ,Arellano ,1937-02-05,masculino,+54(011)220-60-01588 ,Florentino_123@gmail.com,1,Cl. Hidalgo Terrazas # 43 Hab. 480,3,5
@@ -29,16 +29,16 @@ id_paciente,dni,nombre,apellido,fecha_nacimiento,genero,telefono,email,internado
 28,59382573,Angela ,Orozco ,1923-08-13,femenino,+54(011)135-00-05247 ,angela@gmail.com,0,Urb. Jacobo Corral # 17,5,7
 29,48432361,Saturnina ,Mercado ,1959-08-14,femenino,+54(011)235-86-96698 ,saturnina@gmail.com,0,Av. Regina Linares # 46839 Piso 9,6,8
 30,40084375,Andres ,Vera ,1989-08-17,masculino,+54(011)389-96-94583 ,Andres_19234@gmail.com,0,Jr. Ian Cano # 6,7,9
-31,53203344,Yesica ,Bellido ,2015-04-02,femenino,+54(011)799-17-79591 ,Yesi_1@gmail.com,0,"Ronda Tijerina, 52",8,
+31,53203344,Yesica ,Bellido ,2015-04-02,femenino,+54(011)799-17-79591 ,Yesi_1@gmail.com,0,"Ronda Tijerina, 52",8,1
 32,25463607,Hipolito ,Campos ,1986-04-14,masculino,,hipolito@gmail.com,0,"Calle Benavides, 354",9,11
 33,37266810,Victorina ,Sosa ,1990-05-22,femenino,+54(011)504-57-14518 ,victorina@gmail.com,0,"Passeig Raúl, 10",10,12
-34,55568603,Malika ,Sánchez ,2006-04-17,femenino,+54(011)179-12-50567 ,Mailka.24@gmail.com,0,"Avinguda Sisneros, 2 ",11,
+34,55568603,Malika ,Sánchez ,2006-04-17,femenino,+54(011)179-12-50567 ,Mailka.24@gmail.com,0,"Avinguda Sisneros, 2 ",11,2
 35,31841248,Mauro ,Abad ,2017-08-06,masculino,+54(011)692-38-83069 ,mauritodm@gmail.com,0,"Passeig José Antonio, 89 ",12,4
 36,48904162,Nuria ,Barroso ,2021-11-22,femenino,+54(011)148-38-35767 ,nuria@gmail.com,0,"Camiño Adam, 25",13,5
 37,37375482,Markel ,Arevalo ,1960-11-05,masculino,+54(011)686-29-28675 ,markel@gmail.com,1,"Ronda Cabán, 89",14,6
 38,25179629,Engracia ,Navarro ,1961-08-15,masculino,,engracia@gmail.com,0,"Avinguda Valeria, 012",15,7
 39,40741137,Alvaro ,Iglesias ,1931-08-06,masculino,+54(011)093-83-45257 ,alvaro_igle@gmail.com,0,"Passeig Saúl, 4, 7º C",16,8
 40,40552469,Izan ,Quintero ,1921-07-19,masculino,+54(011)305-66-22379 ,izan@gmail.com,0,"Plaza Benito, 72 ",17,9
-41,44250911,Roxana ,Ruiz ,2013-07-13,femenino,+54(011)700-03-32335 ,roxana@gmail.com,0,"Travesía Eva, 8",18,
+41,44250911,Roxana ,Ruiz ,2013-07-13,femenino,+54(011)700-03-32335 ,roxana@gmail.com,0,"Travesía Eva, 8",18,2
 42,51340293,Amelia ,Barrero ,1999-03-28,femenino,+54(011)563-68-04147 ,ame_barrero@gmail.com,1,"Ruela Lucero, 7 ",19,11
 43,53582733,Simona ,Jaen ,1978-02-19,femenino,+54(011)858-18-99857 ,somina@gmail.com,1,"Carrer Mercado, 091",20,12
