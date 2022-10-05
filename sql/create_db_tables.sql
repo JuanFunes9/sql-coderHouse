@@ -45,7 +45,6 @@ CREATE TABLE pacientes (
     genero VARCHAR(60) NOT NULL,
     telefono VARCHAR(60),
     email VARCHAR(60),
-    internado ENUM("0", "1") NOT NULL DEFAULT "0",
     direccion VARCHAR(120) NOT NULL,
     localidad_id INT NOT NULL,
     FOREIGN KEY(localidad_id) REFERENCES localidades(localidad_id),
