@@ -18,7 +18,7 @@ El siguiente SP realiza el ingreso de un nuevo paciente en internaciones. Antes 
 2) Que NO sea un paciente internado actualmente
 3) Que la cama en la que se lo quiera ingresar NO este ya ocupada por otro paciente
 
-Recibe como parametros el ID de paciente, El numero de cama y el movito de ingreso.
+Recibe como parametros el ID de paciente, El numero de cama y el motivo de ingreso.
 */
 CREATE PROCEDURE sp_nueva_internacion(IN p_id_px INT, IN p_cama INT, IN p_motivo_ingreso VARCHAR(255))
 BEGIN
