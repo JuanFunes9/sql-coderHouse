@@ -1,3 +1,8 @@
+/*
+	En el siguiente Backup se guardan las siguientes tablas: consultas, doctores, especialdiades_medicas,
+    internaciones, localidades, obras_sociales y pacientes
+*/
+
 CREATE DATABASE  IF NOT EXISTS `hospital` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `hospital`;
 -- MySQL dump 10.13  Distrib 8.0.30, for Win64 (x86_64)
@@ -16,27 +21,6 @@ USE `hospital`;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `consultas`
---
-
-DROP TABLE IF EXISTS `consultas`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `consultas` (
-  `consulta_id` int NOT NULL AUTO_INCREMENT,
-  `fecha_consulta` date NOT NULL,
-  `id_paciente` int NOT NULL,
-  `id_doctor` int NOT NULL,
-  `motivo_consulta` varchar(255) NOT NULL,
-  PRIMARY KEY (`consulta_id`),
-  KEY `id_paciente` (`id_paciente`),
-  KEY `id_doctor` (`id_doctor`),
-  CONSTRAINT `consultas_ibfk_1` FOREIGN KEY (`id_paciente`) REFERENCES `pacientes` (`id_paciente`),
-  CONSTRAINT `consultas_ibfk_2` FOREIGN KEY (`id_doctor`) REFERENCES `doctores` (`id_doctor`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `consultas`
@@ -95,25 +79,6 @@ DELIMITER ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 
 --
--- Table structure for table `doctores`
---
-
-DROP TABLE IF EXISTS `doctores`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `doctores` (
-  `id_doctor` int NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(60) NOT NULL,
-  `apellido` varchar(60) NOT NULL,
-  `matricula` varchar(60) NOT NULL,
-  `especialidad_id` int NOT NULL,
-  PRIMARY KEY (`id_doctor`),
-  KEY `especialidad_id` (`especialidad_id`),
-  CONSTRAINT `doctores_ibfk_1` FOREIGN KEY (`especialidad_id`) REFERENCES `especialidades_medicas` (`especialidad_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `doctores`
 --
 
@@ -124,20 +89,6 @@ INSERT INTO `doctores` VALUES (1,'Yesica','Bueno','98217',1),(2,'Otilia','GÃ³m
 UNLOCK TABLES;
 
 --
--- Table structure for table `especialidades_medicas`
---
-
-DROP TABLE IF EXISTS `especialidades_medicas`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `especialidades_medicas` (
-  `especialidad_id` int NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(60) NOT NULL,
-  PRIMARY KEY (`especialidad_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `especialidades_medicas`
 --
 
@@ -146,26 +97,6 @@ LOCK TABLES `especialidades_medicas` WRITE;
 INSERT INTO `especialidades_medicas` VALUES (1,'Cardiologia'),(2,'Traumatologia'),(3,'Dermatologia'),(4,'Nutricion'),(5,'Nefrologia'),(6,'Terapia intensiva'),(7,'Neurologia'),(8,'Cirugia general'),(9,'Neurocirugia'),(10,'Psiquiatria'),(11,'Diagnostico por imagenes'),(12,'Flebologia'),(13,'Inmunologia y reumatologia'),(14,'Oftalmologia'),(15,'Clinica medica');
 /*!40000 ALTER TABLE `especialidades_medicas` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `internaciones`
---
-
-DROP TABLE IF EXISTS `internaciones`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `internaciones` (
-  `internacion_id` int NOT NULL AUTO_INCREMENT,
-  `id_paciente` int NOT NULL,
-  `ingreso` date NOT NULL,
-  `cama` int NOT NULL,
-  `egreso` date DEFAULT NULL,
-  `motivo_ingreso` varchar(255) NOT NULL,
-  PRIMARY KEY (`internacion_id`),
-  KEY `id_paciente` (`id_paciente`),
-  CONSTRAINT `internaciones_ibfk_1` FOREIGN KEY (`id_paciente`) REFERENCES `pacientes` (`id_paciente`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `internaciones`
@@ -228,21 +159,6 @@ DELIMITER ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 
 --
--- Table structure for table `localidades`
---
-
-DROP TABLE IF EXISTS `localidades`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `localidades` (
-  `localidad_id` int NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(120) NOT NULL,
-  `cod_postal` varchar(10) NOT NULL,
-  PRIMARY KEY (`localidad_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `localidades`
 --
 
@@ -253,48 +169,6 @@ INSERT INTO `localidades` VALUES (1,'CABAÂ ','1001'),(2,'Caballito','1184'),(3
 UNLOCK TABLES;
 
 --
--- Table structure for table `logs_consultas`
---
-
-DROP TABLE IF EXISTS `logs_consultas`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `logs_consultas` (
-  `log_id` int NOT NULL AUTO_INCREMENT,
-  `fecha_hora` datetime NOT NULL,
-  `empleado` varchar(45) NOT NULL,
-  `detalle` varchar(355) DEFAULT NULL,
-  PRIMARY KEY (`log_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `logs_consultas`
---
-
-LOCK TABLES `logs_consultas` WRITE;
-/*!40000 ALTER TABLE `logs_consultas` DISABLE KEYS */;
-INSERT INTO `logs_consultas` VALUES (1,'2022-10-09 00:00:00','root@localhost','El paciente: 2 consulta por: dolo abdominal. Siendo atendido por el doctor: 5'),(2,'2022-10-09 17:32:49','root@localhost','El paciente: 2 consulta por: dolo abdominal 2222. Siendo atendido por el doctor: 5'),(3,'2022-10-09 17:32:53','root@localhost','El paciente: 2 consulta por: dolo abdominal 2222. Siendo atendido por el doctor: 5'),(4,'2022-10-10 16:09:53','root@localhost','El paciente: 15 consulta por: golpe en la cabeza. Siendo atendido por el doctor: 8'),(5,'2022-10-10 16:11:15','root@localhost','La consulta: 28Fue editada con: El paciente: 15 consulta por: Luxacion de tobillo. Siendo atendido por el doctor: 8');
-/*!40000 ALTER TABLE `logs_consultas` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `obras_sociales`
---
-
-DROP TABLE IF EXISTS `obras_sociales`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `obras_sociales` (
-  `obra_social_id` int NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(60) NOT NULL,
-  `telefono` varchar(60) NOT NULL,
-  `email` varchar(60) NOT NULL,
-  PRIMARY KEY (`obra_social_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Dumping data for table `obras_sociales`
 --
 
@@ -303,33 +177,6 @@ LOCK TABLES `obras_sociales` WRITE;
 INSERT INTO `obras_sociales` VALUES (1,'Union Personal','0810-444-1122 ','unionpersonal@contacto.com'),(2,'OSDEPYM','0800 288 7963 ','mesadeentrada@osdepym.com.ar '),(3,'Jerarquicos Salud','0810-555-4050','jerarquicos@salud.com.ar'),(4,'Andar','(011) 5237-1900 ','informes@andar.com'),(5,'Cover salud','(011) 4833-8300 ','cover@salud.com'),(6,'D.A.S.U.Te.N','+54 11 5371 5754 ','infodas@rec.utn.edu.ar '),(7,'DOSUBA','0810-989-2752','dosuba@gmail.com'),(8,'Elevar','4861-0124 ','administracion@pasteleros.org.ar '),(9,'FEMEBA','(011) 4383-4467 ','consultas@femeba.com'),(10,'IOMA','0810-999-4662','ioma@info.com'),(11,'Osecac','0810-333-0004 ','info@osecac.com'),(12,'OSFE','0800-333-OSFE (6733) ','contactese@osferroviaria.org.ar '),(13,'Osjera','0810 333 0251 ','contacto@osjera.com'),(14,'Osmedica','0800-999-5396 ','contacto@osmedica.com'),(15,'OSPACA','(011) 4106.4500 ','informes@ospaca.com '),(16,'OSPE','0800 444 OSPE (6773) ','contacto@ospe.com.ar'),(17,'OSPIC','0800-888-7060 ','contacto@ospic.com'),(18,'Swiss Medical','0810-444-7700 ','ventaonline@swissmedical.com.ar '),(19,'OSDE','0800-222-SALUD (72583) ','contacto@osde.com.ar '),(20,'OSPRERA','1143122500','consultas@osprera.org.ar ');
 /*!40000 ALTER TABLE `obras_sociales` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Table structure for table `pacientes`
---
-
-DROP TABLE IF EXISTS `pacientes`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `pacientes` (
-  `id_paciente` int NOT NULL AUTO_INCREMENT,
-  `dni` varchar(60) NOT NULL,
-  `nombre` varchar(60) NOT NULL,
-  `apellido` varchar(60) NOT NULL,
-  `fecha_nacimiento` date NOT NULL,
-  `genero` varchar(60) NOT NULL,
-  `telefono` varchar(60) DEFAULT NULL,
-  `email` varchar(60) DEFAULT NULL,
-  `direccion` varchar(120) NOT NULL,
-  `localidad_id` int NOT NULL,
-  `obra_social_id` int DEFAULT NULL,
-  PRIMARY KEY (`id_paciente`),
-  KEY `localidad_id` (`localidad_id`),
-  KEY `obra_social_id` (`obra_social_id`),
-  CONSTRAINT `pacientes_ibfk_1` FOREIGN KEY (`localidad_id`) REFERENCES `localidades` (`localidad_id`),
-  CONSTRAINT `pacientes_ibfk_2` FOREIGN KEY (`obra_social_id`) REFERENCES `obras_sociales` (`obra_social_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `pacientes`
@@ -495,4 +342,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-26 23:41:57
+-- Dump completed on 2022-10-26 23:48:01
